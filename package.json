@@ -1,7 +1,7 @@
 {
   "name": "web-template",
   "version": "1.0.0",
-  "author": "rikzun",
+  "author": "1manariii",
   "scripts": {
     "start": "webpack serve --progress",
     "build": "webpack build --progress"
