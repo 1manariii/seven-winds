@@ -40,7 +40,7 @@ export const Tree = () => {
     return (
         <>
             {rows?.map((row) => (
-                <TreeRow key={row.id} row={row}  level={0} activeId={activeId} setActiveId={setActiveId} setRows={setRows} rows={rows} isEdit={isEdit} setIsEdit={setIsEdit} />
+                <TreeRow key={row.id} row={row}  level={0} activeId={activeId} setActiveId={setActiveId} setRows={setRows} isEdit={isEdit} setIsEdit={setIsEdit} />
             ))}
         </>
     );
