@@ -1,4 +1,5 @@
 /node_modules
 /build
+/.github/workflows
 .DS_Store
 analysis.json
