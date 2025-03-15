@@ -149,6 +149,32 @@ body {
                 height: 100vh;
                 padding: 0 12px;
 
+                @keyframes loading {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                .input-mode-btn-wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .loading__wrapper {
+                    width: 100%;
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .loading-icon {
+                    animation: loading 2s linear infinite; /* 2s — длительность одного оборота */
+                }
+
                 table {
                     border: none;
                 }
@@ -181,6 +207,29 @@ body {
                     text-align: left;
                     color: white;
                     border-bottom: none;
+
+                    .groups-btn__wrapper {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        width: fit-content;
+                        border-radius: 6px;
+                        padding: 4px 0;
+
+                        button {
+                            cursor: pointer;
+
+                            .delete-icon {
+                                width: 16px;
+                                height: 16px;
+                            }
+
+                            .doc-icon {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
                 }
 
                 table .MuiTableBody-root .MuiTableCell-root:first-child {

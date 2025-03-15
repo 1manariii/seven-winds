@@ -21,7 +21,9 @@ export const GroupButtonRow = ({onChangeIsActiveButtons, onChangeIsActiveInputs,
 
     return (
         <>
-            <div style={{ display: "flex", alignItems: "center", marginLeft: `${level * 20}px`, position: "relative", background: `${activeId === id ? 'rgba(65, 65, 68, 1)' : "none"}`, width: "fit-content", borderRadius: '6px', padding: '4px 0'}}>
+            <div className="groups-btn__wrapper" style={{
+                marginLeft: `${level * 20}px`,
+                background: `${activeId === id ? 'rgba(65, 65, 68, 1)' : 'none'}`}}>
                 {activeId===id ? (
                         <button onClick={()=>onChangeIsActiveInputs()}>
                             <img
@@ -35,7 +37,7 @@ export const GroupButtonRow = ({onChangeIsActiveButtons, onChangeIsActiveInputs,
                             <img
                                 src={newIcon}
                                 alt="icon"
-                                style={{ width: 20, height: 20 }}
+                                className="doc-icon"
                             />
                         </button>
                     )}
@@ -47,8 +49,8 @@ export const GroupButtonRow = ({onChangeIsActiveButtons, onChangeIsActiveInputs,
                     <img
                         src={deleteIcon}
                         alt="icon"
-                        style={{ width: 16, height: 16,
-                            opacity: `${activeId === id ? 1 : 0}`}}
+                        className="delete-icon"
+                        style={{opacity: `${activeId === id ? 1 : 0}`}}
                     />
                 </button>
             </div>

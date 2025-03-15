@@ -9,12 +9,11 @@ interface IProps {
 const findRowAndUpdate = ({id, rows, newValue}:IProps):IRowEntity[] => {
     return rows.map((row) => {
         if (row.id === id) {
-            return {...newValue};
-        } else {
-            return {
-                ...row,
-                child: row.child && findRowAndUpdate({id, newValue, rows: row.child})
-            }
+            return {...newValue, child: row.child};
+        }
+        return {
+            ...row,
+            child: row.child && findRowAndUpdate({id, newValue, rows: row.child})
         }
     })
 };

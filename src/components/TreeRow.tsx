@@ -74,7 +74,7 @@ export const TreeRow = ({ row, level, activeId, setActiveId, setRows, isEdit, se
                 <TableCell align="right">
                     <GroupButtonRow onChangeIsActiveButtons={onChangeIsActiveButtons} id={row.id} level={level} onChangeIsActiveInputs={onChangeIsActiveInputs} activeId={activeId} setRows={setRows} />
                 </TableCell>
-                <TableCell align="right" sx={{width: '40%'}}>
+                <TableCell align="right">
                     {isEdit == row.id ? (
                         <input
                             type="text"

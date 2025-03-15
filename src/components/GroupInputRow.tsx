@@ -42,22 +42,24 @@ export const GroupInputRow = ({isActiveButtons, isActiveInputs, parentId, level,
         setRows(rows => createRow({parentId, rows, newRow}))
         setActiveId(null)
     }
+
     return (
         <>
             {isActiveButtons && isActiveInputs && (
                 <TableRow key={parentId}>
                     <TableCell align="right">
-                        <div style={{ display: "flex", alignItems: "center", marginLeft: `${(level+1) * 20}px`, position: "relative" }}>
-                            <button style={{background: "none", border: "none"}} onClick={onClickCreateRow}>
+                        <div style={{ marginLeft: `${(level+1) * 20}px`, position: "relative" }} className="input-mode-btn-wrapper">
+                            <button onClick={onClickCreateRow}>
                                 <img
                                     src={newIcon}
                                     alt="icon"
-                                    style={{ width: 20, height: 20, marginRight: 10 }}
+                                    className="doc-icon"
+                                    style={{ marginRight: 10 }}
                                 />
                             </button>
                         </div>
                     </TableCell>
-                    <TableCell align="right" sx={{width: '40%'}}>
+                    <TableCell align="right">
                         <input
                             type="text"
                             name="rowName"
